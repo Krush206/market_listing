@@ -1,11 +1,11 @@
 /*
-   Project: test
+   Project: Market Listing
 
    Copyright (C) 2025 Free Software Foundation
 
-   Author: User &
+   Author: Matheus Garcia
 
-   Created: 2025-02-03 10:58:54 +0000 by garcia
+   Created: 2025-02-17 16:20:07 +0000 by garcia
 
    This application is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public
@@ -22,26 +22,15 @@
    Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111 USA.
 */
 
-#ifndef _TABLE_H_
-#define _TABLE_H_
-
 #import "AppController.h"
 
-@interface Table : NSTableView <NSTableViewDataSource>
-{
-  Button *yBtn, *nBtn;
-  Window *addWin, *delWin;
-  Text *lab, *txt;
-  NSMutableArray *mutarr;
-  NSRect rect;
-  NSUInteger item;
+@implementation Button
++ (instancetype) button: (NSString *) title size: (NSRect) rect {
+  Button *button;
+  
+  button = [[super alloc] initWithFrame: rect];
+  [button setTitle: title];
+  
+  return button;
 }
-@property (nonatomic, strong) NSArray *arr;
-
-- (NSInteger) numberOfRowsInTableView: (NSTableView *) tableView;
-- (id) tableView: (NSTableView *) tableView objectValueForTableColumn: (NSTableColumn *) tableColumn row: (NSInteger) row;
 @end
-
-#endif // _TABLE_H_
-
-

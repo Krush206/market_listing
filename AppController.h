@@ -1,7 +1,7 @@
 /* 
-   Project: test
+   Project: Market Listing
 
-   Author: User &
+   Author: Matheus Garcia
 
    Created: 2025-02-02 00:02:23 +0000 by garcia
    
@@ -15,10 +15,51 @@
 // Uncomment if your application is Renaissance-based
 //#import <Renaissance/Renaissance.h>
 
-#import "Button.h"
-#import "Window.h"
-#import "Text.h"
-#import "Table.h"
+@interface Text : NSTextField <NSTextFieldDelegate>
+{
+  NSText *txtfld;
+}
+@property (nonatomic, strong) NSString *itemName;
+@property (nonatomic, strong) NSString *itemPrice;
+
+- (BOOL) textShouldBeginEditing: (NSText *) textObject;
+- (void) textDidChange: (NSNotification *) notif;
+- (BOOL) textShouldEndEditing: (NSText *) textObject;
+@end
+
+@interface Button : NSButton
+{
+}
+
++ (instancetype) button: (NSString *) title size: (NSRect) rect;
+@end
+
+@interface Window : NSWindow <NSWindowDelegate>
+{
+}
+
++ (instancetype) window: (NSString *) title size: (NSRect) rect visible: (BOOL) visible;
+- (BOOL) windowShouldClose: (id) sender;
+@end
+
+@interface Table : NSTableView <NSTableViewDataSource>
+{
+  Button *yBtn, *nBtn;
+  Window *addWin, *delWin;
+  Text *labName, *labPrice;
+  NSText *txt;
+  NSMutableArray *mutArrName, *mutArrPrice;
+  NSRect rect;
+  NSUInteger itemName, itemPrice;
+  NSTableColumn *col;
+  NSArray *arr;
+}
+@property (nonatomic, strong) NSArray *arrName;
+@property (nonatomic, strong) NSArray *arrPrice;
+
+- (NSInteger) numberOfRowsInTableView: (NSTableView *) tableView;
+- (id) tableView: (NSTableView *) tableView objectValueForTableColumn: (NSTableColumn *) tableColumn row: (NSInteger) row;
+@end
 
 @interface AppController : NSObject <NSApplicationDelegate>
 {

@@ -1,11 +1,11 @@
 /*
-   Project: test
+   Project: Market Listing
 
    Copyright (C) 2025 Free Software Foundation
 
-   Author: User &
+   Author: Matheus Garcia
 
-   Created: 2025-02-03 10:59:30 +0000 by garcia
+   Created: 2025-02-17 16:19:47 +0000 by garcia
 
    This application is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public
@@ -22,18 +22,27 @@
    Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111 USA.
 */
 
-#ifndef _WINDOW_H_
-#define _WINDOW_H_
-
 #import "AppController.h"
 
-@interface Window : NSWindow <NSWindowDelegate>
-{
+@implementation Window
++ (instancetype) window: (NSString *) title size: (NSRect) rect visible: (BOOL) visible {
+  Window *window;
+  
+  window = [[super alloc] initWithContentRect: rect styleMask: NSWindowStyleMaskTitled | NSWindowStyleMaskClosable | NSWindowStyleMaskMiniaturizable | NSWindowStyleMaskResizable backing: NSBackingStoreBuffered defer: NO];
+  [window setTitle: title];
+  [window center];
+  [window setIsVisible: visible];
+  [window setDelegate: window];
+  
+  return window;
 }
 
-+ (instancetype) window: (NSString *) title size: (NSRect) rect visible: (BOOL) visible;
-- (BOOL) windowShouldClose: (id) sender;
+- (BOOL) windowShouldClose: (id) sender {
+  NSString *ident;
+  
+  if((ident = [[sender contentView] identifier]) != nil &&
+     [ident isEqualToString: @"market"])
+    [NSApp terminate: sender];
+  return YES;
+}
 @end
-
-#endif // _WINDOW_H_
-

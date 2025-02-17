@@ -38,17 +38,17 @@ Resources/MainMenu-OSX.gsmarkup
 # Header files
 #
 test_HEADER_FILES = \
-AppController.h \
-Table.h \
-Window.h \
-Button.h \
-Text.h
+AppController.h
 
 #
 # Class files
 #
 test_OBJC_FILES = \
-AppController.m
+AppController.m \
+Text.m \
+Table.m \
+Window.m \
+Button.m
 
 #
 # Other sources

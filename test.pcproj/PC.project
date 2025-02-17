@@ -12,7 +12,11 @@
     );
     "BUILDER_VERBOSE" = YES;
     "CLASS_FILES" = (
-	"AppController.m"
+	"AppController.m",
+	"Text.m",
+	"Table.m",
+	"Window.m",
+	"Button.m"
     );
     COMPILEROPTIONS = "";
     CPPOPTIONS = "";
@@ -22,11 +26,7 @@
     FRAMEWORKS = (
     );
     "HEADER_FILES" = (
-	"AppController.h",
-	"Table.h",
-	"Window.h",
-	"Button.h",
-	"Text.h"
+	"AppController.h"
     );
     IMAGES = (
     );
@@ -57,11 +57,12 @@
     );
     "PRINCIPAL_CLASS" = NSApplication;
     "PROJECT_AUTHORS" = (
+	"Matheus Garcia"
     );
-    "PROJECT_COPYRIGHT" = "Copyright (C) 200x";
-    "PROJECT_COPYRIGHT_DESC" = "Released under ...";
+    "PROJECT_COPYRIGHT" = "Copyright (C) 2025";
+    "PROJECT_COPYRIGHT_DESC" = "Released under 3-clause BSD license";
     "PROJECT_CREATOR" = "User &";
-    "PROJECT_DESCRIPTION" = "No description avaliable!";
+    "PROJECT_DESCRIPTION" = "E-commerce management system";
     "PROJECT_DOCUMENTTYPES" = (
     );
     "PROJECT_GROUP" = "No group avaliable!";
