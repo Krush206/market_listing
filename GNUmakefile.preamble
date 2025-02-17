@@ -18,7 +18,7 @@ ADDITIONAL_LDFLAGS +=
 ADDITIONAL_INCLUDE_DIRS += -I/usr/local/GNUstep/Local/Library/Headers/ 
 
 # Additional library directories the linker should search
-ADDITIONAL_LIB_DIRS += -L/usr/local/GNUstep/Local/Library/Libraries/ -L/ -L/usr/local/GNUstep/Local/Library/Libraries -L/usr/local/GNUstep/System/Library/Libraries 
+ADDITIONAL_LIB_DIRS += -L/usr/local/GNUstep/Local/Library/Libraries/ 
 
 # Additional GUI libraries to link
 ADDITIONAL_GUI_LIBS += -lNGObjWeb 

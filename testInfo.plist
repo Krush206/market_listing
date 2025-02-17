@@ -7,7 +7,7 @@
 	"Matheus Garcia"
     );
     Copyright = "Copyright (C) 2025";
-    CopyrightDescription = "Released under 3-clause BSD license";
+    CopyrightDescription = "Released under the terms of the General Public License version 3";
     FullVersionID = "0.1";
     NSExecutable = test;
     NSMainNibFile = "test.gorm";

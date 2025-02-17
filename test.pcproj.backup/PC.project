@@ -60,7 +60,7 @@
 	"Matheus Garcia"
     );
     "PROJECT_COPYRIGHT" = "Copyright (C) 2025";
-    "PROJECT_COPYRIGHT_DESC" = "Released under 3-clause BSD license";
+    "PROJECT_COPYRIGHT_DESC" = "Released under the terms of the General Public License version 3";
     "PROJECT_CREATOR" = "User &";
     "PROJECT_DESCRIPTION" = "E-commerce management system";
     "PROJECT_DOCUMENTTYPES" = (
@@ -76,10 +76,7 @@
 	"/usr/local/GNUstep/Local/Library/Headers/"
     );
     "SEARCH_LIB_DIRS" = (
-	"/usr/local/GNUstep/Local/Library/Libraries/",
-	"/",
-	"/usr/local/GNUstep/Local/Library/Libraries",
-	"/usr/local/GNUstep/System/Library/Libraries"
+	"/usr/local/GNUstep/Local/Library/Libraries/"
     );
     SUBPROJECTS = (
     );
